@@ -7,10 +7,12 @@ import Header from './components/layout/Header'
 
 function App() {
   return (
-    <div> 
-      <Header/>
-      <Hero/>
-      <Footer/>
+    <div>
+      
+        <Header/>
+        <Hero/>
+        <Footer/>
+      
       
     </div>
 
