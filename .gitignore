@@ -1,32 +1,65 @@
+# =========================
 # Python
+# =========================
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 
-.archive/
-
-# Virtual environment
+# Virtual Environments
 .venv/
 venv/
 env/
 
-# PyCharm
-.idea/
-
-# Data / local files
-data/
-*.json
-
-# Environment variables
+# Environment Variables
 .env
 
-# Logs
+# =========================
+# Python Data / Local Files
+# =========================
+archive/
+data/
+
+# =========================
+# Node / React / Vite
+# =========================
+node_modules/
+frontend/node_modules/
+
+dist/
+frontend/dist/
+dist-ssr/
+
+# Package Manager Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# General Logs
+logs/
 *.log
 
-# Frontend
-frontend/node_modules/
-frontend/dist/
+# Local Config
+*.local
 
-node_modules/
-dist/
+# =========================
+# IDEs & Editors
+# =========================
+.vscode/*
+!.vscode/extensions.json
+
+.idea/
+
+# OS Files
+.DS_Store
+
+# Visual Studio
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Swap Files
+*.sw?
