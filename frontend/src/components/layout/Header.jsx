@@ -1,11 +1,10 @@
-
 import Navbar from './Navbar'
 
-const Header = () => {
+function Header() {
   return (
-    <div>
-        <Navbar/>
-    </div>
+    <header className="absolute inset-x-0 top-0 z-50">
+      <Navbar />
+    </header>
   )
 }
 

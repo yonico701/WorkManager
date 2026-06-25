@@ -1,18 +1,26 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
+function Hero() {
+  return (
+    <section className=" min-h-[60vh] relative overflow-hidden">
+      <main className="relative isolate px-6 pt-14 lg:px-8">
+        <div className="mx-auto max-w-2xl py-32 text-center sm:py-48 lg:py-24">
+          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+            <p className="rounded-full px-3 py-1 text-sm text-gray-600 ring-1 ring-gray-900/10">
+              Modern platform for managing service requests
+            </p>
+          </div>
 
+          <h1 className="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
+            Manage your work in one place
+          </h1>
 
-function Hero()  {
-    return(
-        <div className="search">
-            <h1> welcome to WorkManager</h1><br></br>
-            <h2>Find professionals and manage jobs easily</h2><br></br>
-            <input className="search" type="text" placeholder="Search..."  ></input>
-            <button className="search-button" type="button" > <FontAwesomeIcon icon={faMagnifyingGlass} />  </button>
-
-
+          <p className="mt-8 text-lg font-medium text-gray-500 sm:text-xl/8">
+            Create jobs, manage customers, assign service providers, and track
+            every task from one simple platform.
+          </p>
         </div>
-    )
+      </main>
+    </section>
+  );
 }
 
-export default Hero
+export default Hero;

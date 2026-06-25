@@ -1,66 +1,65 @@
+import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-regular-svg-icons'
-import { useState } from 'react'
-
-
-
+import { faHammer } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
+  const [isLoginOpen, setIsLoginOpen] = useState(false)
 
-    const [isOpen, setIsOpen] = useState(false)
+  const navigation = ['Home', 'About', 'Jobs', 'Gallery']
 
-    const handlUserMenu = () => {
-        setIsOpen(!isOpen)
-    }
+  const handleLoginMenu = () => {
+    setIsLoginOpen(!isLoginOpen)
+  }
 
-    return(
-        <nav className="relative flex items-center px-6 py-4 bg-blue-500 text-white shadow-md  text-lg font-semibold border-b border-gray-50 rounded-lg z-50 overflow-visible w-full"> 
-            <div className="text-2xl text-orange-500">
-                WorkManager
+  return (
+    <nav className=" left-0 z-50 grid w-full grid-cols-3 items-center px-8 py-6">
+        <a href="#" className="text-2xl font-bold text-indigo-600">
+            WorkManager <FontAwesomeIcon icon={faHammer} />
+        </a>
+
+        <ul className="hidden justify-center gap-10 text-sm font-semibold text-gray-900 md:flex">
+            {navigation.map((item) => (
+            <li key={item}>
+                <a
+                href="#"
+                className="inline-block text-xl transition-all duration-200 hover:-translate-y-0.5 hover:text-indigo-600"
+                >
+                {item}
+                </a>
+            </li>
+            ))}
+        </ul>
+
+        <div className="relative hidden justify-self-end md:block">
+            <button
+            onClick={handleLoginMenu}
+            className="cursor-pointer text-xl font-semibold text-gray-900 transition duration-200 hover:text-indigo-600"
+            >
+            <FontAwesomeIcon icon={faUser} />
+            </button>
+
+            {isLoginOpen && (
+            <div className="absolute right-0 mt-4 w-44 rounded-xl bg-white p-2 shadow-lg ring-1 ring-gray-900/10">
+                <a
+                href="#"
+                className="block rounded-lg px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
+                >
+                Login
+                </a>
+
+                <a
+                href="#"
+                className="block rounded-lg px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
+                >
+                Register
+                </a>
             </div>
-            <ul className="flex gap-6 absolute left-1/2 transform -translate-x-1/2 ">
-                <li className=" hover:text-blue-300  hover:scale-105 transition duration-200 hover:opacity-95">
-                    <a href="#">HOME</a>
-                </li>
-                <li className=" hover:text-blue-300  hover:scale-105 transition duration-200 hover:opacity-95" >
-                    <a href="#">ABOUT</a>
-                </li>
-                <li className=" hover:text-blue-300  hover:scale-105 transition duration-200 hover:opacity-95">
-                    <a href="#">JOBS</a>
-                </li>
-                <li className=" hover:text-blue-300  hover:scale-105 transition duration-200 hover:opacity-95">
-                    <a href="#">GALLERY</a>
-                </li>
-                <li>
-                    
-
-                </li>
-            </ul>
-            <div className="absolute right-15 top-1/2 -translate-y-1/2">
-                <div className=" relative">
-                    <button onClick={handlUserMenu}
-                    className=" hover:text-blue-300  hover:scale-105 transition duration-200 hover:opacity-95 cursor-pointer ml-auto">
-                        <FontAwesomeIcon icon={faUser} />
-                    </button>
-                    {isOpen && (
-                        <div className="absolute left-1/2 top-full mt-3 w-40 -translate-x-1/2 bg-white text-gray-800 rounded-xl shadow-lg border border-gray-200 z-[999]">
-                            <ul>
-                                <li>
-                                    LOGIN
-                                </li>
-                                <li>
-                                    SIGN UP
-                                </li>
-                            </ul>
-                        </div>
-                    )}
-                </div>
-            </div>
-            
-
-        </nav>
-
-        )
-        }
+            )}
+        </div>
+    </nav>
+    
+  )
+}
 
 export default Navbar
