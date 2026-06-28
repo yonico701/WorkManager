@@ -16,6 +16,8 @@ function Hero() {
           <p className="mt-8 text-lg font-medium text-gray-500 sm:text-xl/8">
             Create jobs, manage customers, assign service providers, and track
             every task from one simple platform.
+            WorkManager connects customers who need service with providers
+            looking for available jobs.
           </p>
         </div>
       </main>

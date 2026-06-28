@@ -11,10 +11,7 @@ function UserTypes() {
             One platform, two ways to work
           </p>
 
-          <p className="mt-6 text-lg text-gray-500">
-            WorkManager connects customers who need service with providers
-            looking for available jobs.
-          </p>
+          
         </div>
 
         <div className="mx-auto mt-16 grid max-w-5xl gap-8 md:grid-cols-2">
