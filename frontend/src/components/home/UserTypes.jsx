@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 function UserTypes() {
   return (
     <section className="relative isolate px-6 pb-24 lg:px-8">
@@ -35,12 +37,12 @@ function UserTypes() {
               <li>✓ Manage your service history</li>
             </ul>
 
-            <a
-              href="#"
+            <Link
+              to = "/login"
               className="mt-8 inline-block rounded-md bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition duration-200 hover:bg-indigo-500"
             >
               Create Job
-            </a>
+            </Link>
           </div>
 
           <div className="rounded-3xl bg-white p-8 shadow-sm ring-1 ring-gray-900/10 transition duration-200 hover:-translate-y-1 hover:shadow-lg">
@@ -63,12 +65,12 @@ function UserTypes() {
               <li>✓ Update job progress</li>
             </ul>
 
-            <a
-              href="#"
+            <Link
+              to = "/login"
               className="mt-8 inline-block rounded-md bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition duration-200 hover:bg-indigo-500"
             >
               View Open Jobs
-            </a>
+            </Link>
           </div>
         </div>
       </div>
